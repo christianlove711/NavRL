@@ -1,0 +1,24 @@
+python training/scripts/train.py \
+    wandb.mode=online \
+    wandb.project=NavRL_Drones \
+    wandb.group=default_run
+
+    wandb login
+    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
+    
+    
+    (NavRL) ubuntu@10-60-38-112:~/NavRL/isaac-training$ python training/scripts/train.py \
+    wandb.mode=online \
+    wandb.project=NavRL_Drones \
+    wandb.group=default_run
+Could not override 'wandb.group'.
+To append to your config use +wandb.group=default_run
+Key 'group' is not in struct
+    full_key: wandb.group
+    object_type=dict
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+
+python training/scripts/train.py \
+    wandb.mode=online \
+    wandb.project=NavRL_Drones

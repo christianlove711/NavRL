@@ -1,0 +1,57 @@
+[5.425s] Simulation App Starting
+2026-02-10 13:59:17 [8,921ms] [Warning] [omni.kit.hotkeys.core.registry] [Hotkey] duplicated action as SPACE (On Press) with omni.kit.widget.toolbar.omni.kit.widget.toolbar::toolbar::play!
+2026-02-10 13:59:17 [8,921ms] [Warning] [omni.kit.hotkeys.core.registry] [Hotkey] Cannot register Global [omni.kit.widget.toolbar] omni.kit.widget.toolbar::toolbar::play.SPACE, error code: Duplicated action definition
+[9.152s] app ready
+2026-02-10 13:59:18 [9,861ms] [Warning] [omni.kit.hotkeys.core.registry] [Hotkey] duplicated action as SPACE (On Press) with omni.kit.widget.toolbar.omni.kit.widget.toolbar::toolbar::play!
+2026-02-10 13:59:18 [9,862ms] [Warning] [omni.kit.hotkeys.core.registry] [Hotkey] Cannot register Global [omni.kit.widget.toolbar] omni.kit.widget.toolbar::toolbar::play.SPACE, error code: Duplicated action definition
+[10.217s] RTX ready
+[12.121s] Simulation App Startup Complete
+wandb: WARNING The anonymous setting has no effect and will be removed in a future version.
+[2026-02-10 21:59:20,719][asyncio][DEBUG] - Using selector: EpollSelector
+[2026-02-10 21:59:20,746][git.cmd][DEBUG] - Popen(['git', 'version'], cwd=/home/ubuntu/NavRL/isaac-training, stdin=None, shell=False, universal_newlines=False)
+[2026-02-10 21:59:20,750][git.cmd][DEBUG] - Popen(['git', 'version'], cwd=/home/ubuntu/NavRL/isaac-training, stdin=None, shell=False, universal_newlines=False)
+[2026-02-10 21:59:20,754][git.util][DEBUG] - sys.platform='linux', git_executable='git'
+[2026-02-10 21:59:20,755][git.cmd][DEBUG] - Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/ubuntu/NavRL, stdin=None, shell=False, universal_newlines=False)
+wandb: [wandb.login()] Loaded credentials for https://api.wandb.ai from /home/ubuntu/.netrc.
+[2026-02-10 21:59:20,767][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): api.wandb.ai:443
+[2026-02-10 21:59:22,563][urllib3.connectionpool][DEBUG] - https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+[2026-02-10 21:59:22,947][urllib3.connectionpool][DEBUG] - https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+wandb: Currently logged in as: chrismeng711 (chrismeng711-fudan-university-school-of-management) to https://api.wandb.ai. Use `wandb login --relogin` to force relogin
+[2026-02-10 21:59:23,185][git.util][DEBUG] - sys.platform='linux', git_executable='git'
+[2026-02-10 21:59:23,188][git.cmd][DEBUG] - Popen(['git', 'cat-file', '--batch-check'], cwd=/home/ubuntu/NavRL, stdin=<valid stream>, shell=False, universal_newlines=False)
+Error executing job with overrides: ['wandb.mode=online', 'wandb.project=NavRL_Drones']
+[2026-02-10 21:59:24,778][urllib3.connectionpool][DEBUG] - Starting new HTTPS connection (1): o151352.ingest.sentry.io:443
+Traceback (most recent call last):
+  File "/home/ubuntu/NavRL/isaac-training/training/scripts/train.py", line 29, in main
+    run = wandb.init(
+  File "/home/ubuntu/miniconda3/envs/NavRL/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1595, in init
+    get_sentry().reraise(e)
+  File "/home/ubuntu/miniconda3/envs/NavRL/lib/python3.10/site-packages/wandb/analytics/sentry.py", line 190, in reraise
+    raise exc.with_traceback(tb)
+  File "/home/ubuntu/miniconda3/envs/NavRL/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1578, in init
+    run = wi.init(run_settings, run_config, run_printer)
+  File "/home/ubuntu/miniconda3/envs/NavRL/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1031, in init
+    raise error
+wandb.errors.errors.CommError: Error uploading run: returned error 403: {"data":{"upsertBucket":null},"errors":[{"message":"permission denied","path":["upsertBucket"],"extensions":{"code":"PERMISSION_ERROR"}}]}
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+wandb: 
+wandb: Find logs at: wandb/run-20260210_215922-n2obj5kj/logs
+2026-02-10 13:59:25 [16,566ms] [Warning] [carb] [Plugin: omni.spectree.delegate.plugin] Module /home/ubuntu/isaac_sim_local/kit/exts/omni.usd_resolver/bin/libomni.spectree.delegate.plugin.so remained loaded after unload request
+2026-02-10 13:59:25 [16,570ms] [Warning] [omni.stageupdate.plugin] Deprecated: direct use of IStageUpdate callbacks is deprecated. Use IStageUpdate::getStageUpdate instead.
+2026-02-10 13:59:25 [16,571ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 13:59:25 [16,571ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 13:59:25 [16,571ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 13:59:25 [16,571ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 13:59:25 [16,572ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 13:59:25 [16,572ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 13:59:25 [16,572ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 13:59:25 [16,572ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 13:59:25 [16,572ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 13:59:25 [16,572ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 13:59:25 [16,572ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 13:59:25 [16,576ms] [Warning] [carb.audio.context] 1 contexts were leaked
+2026-02-10 13:59:25 [16,651ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2026-02-10 13:59:25 [16,665ms] [Warning] [omni.core.ITypeFactory] Module /home/ubuntu/isaac_sim_local/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+(NavRL) ubuntu@10-60-38-112:~/NavRL/isaac-training$ 
+

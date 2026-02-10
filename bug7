@@ -1,0 +1,67 @@
+
+[NavRL]: evaluation done.
+[NavRL]: model saved at training step:  0
+/home/ubuntu/isaac_sim_local/extscache/omni.pip.torch-2_0_1-2.0.2+105.1.lx64/torch-2-0-1/torch/_functorch/deprecated.py:58: UserWarning: We've integrated functorch into PyTorch. As the final step of the integration, functorch.vmap is deprecated as of PyTorch 2.0 and will be deleted in a future version of PyTorch >= 2.3. Please use torch.vmap instead; see the PyTorch 2.0 release notes and/or the torch.func migration guide for more details https://pytorch.org/docs/master/func.migrating.html
+  warn_deprecated('vmap', 'torch.vmap')
+2026-02-10 14:20:45 [814,327ms] [Warning] [carb] Client omni.ui has acquired [carb::svg::Svg v0.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+2026-02-10 14:20:45 [814,327ms] [Warning] [carb] Client omni.ui has acquired [omni::kit::renderer::IRenderer v1.9] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+^C2026-02-10 14:40:27 [1,995,928ms] [Warning] [omni.isaac.core.articulations.articulation_view] Physics Simulation View is not created yet in order to use set_joint_velocities
+2026-02-10 14:40:27 [1,995,928ms] [Warning] [omni.isaac.core.prims.rigid_prim_view] Physics Simulation View is not created yet
+2026-02-10 14:40:27 [1,995,928ms] [Warning] [omni.isaac.core.prims.rigid_prim_view] Physics Simulation View is not created yet
+Error executing job with overrides: []
+Traceback (most recent call last):
+  File "/home/ubuntu/NavRL/isaac-training/training/scripts/train.py", line 88, in main
+    for i, data in enumerate(collector):
+  File "/home/ubuntu/NavRL/isaac-training/third_party/OmniDrones/omni_drones/utils/torchrl/collector.py", line 53, in iterator
+    tensordict_out = self.rollout() # roll out trajectory
+  File "/home/ubuntu/NavRL/isaac-training/third_party/OmniDrones/omni_drones/utils/torchrl/collector.py", line 36, in rollout
+    _tensordict_out = super().rollout()
+  File "/home/ubuntu/NavRL/isaac-training/third_party/rl/torchrl/_utils.py", line 470, in unpack_rref_and_invoke_function
+    return func(self, *args, **kwargs)
+  File "/home/ubuntu/isaac_sim_local/extscache/omni.pip.torch-2_0_1-2.0.2+105.1.lx64/torch-2-0-1/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/ubuntu/NavRL/isaac-training/third_party/rl/torchrl/collectors/collectors.py", line 943, in rollout
+    env_output, env_next_output = self.env.step_and_maybe_reset(env_input)
+  File "/home/ubuntu/NavRL/isaac-training/third_party/rl/torchrl/envs/common.py", line 2649, in step_and_maybe_reset
+    tensordict = self.step(tensordict)
+  File "/home/ubuntu/NavRL/isaac-training/third_party/rl/torchrl/envs/common.py", line 1410, in step
+    next_tensordict = self._step(tensordict)
+  File "/home/ubuntu/NavRL/isaac-training/third_party/rl/torchrl/envs/transforms/transforms.py", line 768, in _step
+    next_tensordict = self.base_env._step(tensordict_in)
+  File "/home/ubuntu/NavRL/isaac-training/third_party/OmniDrones/omni_drones/envs/isaac_env.py", line 267, in _step
+    self._post_sim_step(tensordict)
+  File "/home/ubuntu/NavRL/isaac-training/training/scripts/env.py", line 427, in _post_sim_step
+    self.move_dynamic_obstacle()
+  File "/home/ubuntu/NavRL/isaac-training/training/scripts/env.py", line 287, in move_dynamic_obstacle
+    dynamic_obstacle.write_root_state_to_sim(self.dyn_obs_state[category_idx*self.dyn_obs_num_of_each_category:(category_idx+1)*self.dyn_obs_num_of_each_category])
+  File "/home/ubuntu/NavRL/isaac-training/third_party/orbit/source/extensions/omni.isaac.orbit/omni/isaac/orbit/assets/rigid_object/rigid_object.py", line 180, in write_root_state_to_sim
+    self.write_root_pose_to_sim(root_state[:, :7], env_ids=env_ids)
+  File "/home/ubuntu/NavRL/isaac-training/third_party/orbit/source/extensions/omni.isaac.orbit/omni/isaac/orbit/assets/rigid_object/rigid_object.py", line 204, in write_root_pose_to_sim
+    self.root_physx_view.set_transforms(root_poses_xyzw, indices=physx_env_ids)
+AttributeError: 'NoneType' object has no attribute 'set_transforms'
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+wandb: 
+wandb: You can sync this run to the cloud by running:
+wandb: wandb sync /home/ubuntu/NavRL/isaac-training/wandb/offline-run-20260210_220723-10ooh7y5
+wandb: Find logs at: wandb/offline-run-20260210_220723-10ooh7y5/logs
+2026-02-10 14:40:28 [1,996,667ms] [Warning] [carb] [Plugin: omni.spectree.delegate.plugin] Module /home/ubuntu/isaac_sim_local/kit/exts/omni.usd_resolver/bin/libomni.spectree.delegate.plugin.so remained loaded after unload request
+2026-02-10 14:40:28 [1,996,670ms] [Warning] [omni.stageupdate.plugin] Deprecated: direct use of IStageUpdate callbacks is deprecated. Use IStageUpdate::getStageUpdate instead.
+2026-02-10 14:40:28 [1,996,672ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 14:40:28 [1,996,672ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 14:40:28 [1,996,672ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 14:40:28 [1,996,672ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 14:40:28 [1,996,672ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 14:40:28 [1,996,672ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 14:40:28 [1,996,672ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 14:40:28 [1,996,672ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 14:40:28 [1,996,672ms] [Warning] [omni.graph.core.plugin] Node type name '' is missing the unique namespace
+2026-02-10 14:40:28 [1,996,672ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 14:40:28 [1,996,673ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 14:40:28 [1,996,673ms] [Warning] [omni.graph.core.plugin] Could not find category 'Replicator:Annotators' for removal
+2026-02-10 14:40:28 [1,996,677ms] [Warning] [carb.audio.context] 1 contexts were leaked
+2026-02-10 14:40:28 [1,996,728ms] [Warning] [carb] Recursive unloadAllPlugins() detected!
+2026-02-10 14:40:28 [1,996,747ms] [Warning] [omni.core.ITypeFactory] Module /home/ubuntu/isaac_sim_local/kit/exts/omni.activity.core/bin/libomni.activity.core.plugin.so remained loaded after unload request.
+/home/ubuntu/miniconda3/envs/NavRL/lib/python3.10/multiprocessing/resource_tracker.py:224: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+
